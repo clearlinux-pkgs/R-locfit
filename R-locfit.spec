@@ -4,14 +4,14 @@
 #
 Name     : R-locfit
 Version  : 1.5.9.1
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/locfit_1.5-9.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/locfit_1.5-9.1.tar.gz
 Summary  : Local Regression, Likelihood and Density Estimation.
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-locfit-lib
-BuildRequires : clr-R-helpers
+Requires: R-locfit-lib = %{version}-%{release}
+BuildRequires : buildreq-R
 
 %description
 No detailed description available
@@ -32,11 +32,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523314387
+export SOURCE_DATE_EPOCH=1552767618
 
 %install
+export SOURCE_DATE_EPOCH=1552767618
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523314387
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -71,8 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library locfit|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  locfit || :
 
 
 %files
@@ -124,7 +123,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/locfit/help/paths.rds
 /usr/lib64/R/library/locfit/html/00Index.html
 /usr/lib64/R/library/locfit/html/R.css
-/usr/lib64/R/library/locfit/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
