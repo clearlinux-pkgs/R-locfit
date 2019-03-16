@@ -4,7 +4,7 @@
 #
 Name     : R-locfit
 Version  : 1.5.9.1
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/locfit_1.5-9.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/locfit_1.5-9.1.tar.gz
 Summary  : Local Regression, Likelihood and Density Estimation.
