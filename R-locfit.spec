@@ -4,7 +4,7 @@
 #
 Name     : R-locfit
 Version  : 1.5.9.1
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/locfit_1.5-9.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/locfit_1.5-9.1.tar.gz
 Summary  : Local Regression, Likelihood and Density Estimation.
@@ -32,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552767618
+export SOURCE_DATE_EPOCH=1552926723
 
 %install
-export SOURCE_DATE_EPOCH=1552767618
+export SOURCE_DATE_EPOCH=1552926723
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
