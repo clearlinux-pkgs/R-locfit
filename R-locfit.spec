@@ -6,10 +6,10 @@
 # autospec commit: fbbd4e3
 #
 Name     : R-locfit
-Version  : 1.5.9.11
-Release  : 60
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/locfit_1.5-9.11.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/locfit_1.5-9.11.tar.gz
+Version  : 1.5.9.12
+Release  : 61
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/locfit_1.5-9.12.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/locfit_1.5-9.12.tar.gz
 Summary  : Local Regression, Likelihood and Density Estimation
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -50,10 +50,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740094956
+export SOURCE_DATE_EPOCH=1741231097
 
 %install
-export SOURCE_DATE_EPOCH=1740094956
+export SOURCE_DATE_EPOCH=1741231097
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
